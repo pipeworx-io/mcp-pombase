@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-pombase",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "PomBase MCP — the fission yeast (Schizosaccharomyces pombe) model-organism database.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-pombase": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "pombase"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-pombase"
+    "url": "git+https://github.com/pipeworx-io/mcp-pombase.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-735ff83974aaf87ecc289a8d3b2e03949934567730f88948cbf5928a61551bc4",
+    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
   }
 }
