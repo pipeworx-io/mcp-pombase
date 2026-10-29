@@ -1,0 +1,34 @@
+[
+  {
+    "name": "get_gene",
+    "description": "PomBase (fission yeast / S. pombe model-organism DB): look up a gene by its PomBase systematic id and return its product, protein domains (InterPro), deletion viability, UniProt id, and curation status. Keyless. NOTE: requires a systematic id like \"SPAC1002.01\" or \"SPBC2F12.13\" — standard gene names like \"cdc2\" are NOT resolved by this API. Complements SGD (budding yeast).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A PomBase systematic id, e.g. \"SPAC1002.01\" or \"SPBC2F12.13\". Standard names (\"cdc2\") are not accepted."
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "get_reference",
+    "description": "PomBase: look up a curated S. pombe publication by its PubMed id (e.g. \"PMID:11739790\") and return its title, citation, authors, year, abstract, and how many genes it annotates. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pmid": {
+          "type": "string",
+          "description": "A PubMed id, with or without the \"PMID:\" prefix, e.g. \"PMID:11739790\" or \"11739790\"."
+        }
+      },
+      "required": [
+        "pmid"
+      ]
+    }
+  }
+]
